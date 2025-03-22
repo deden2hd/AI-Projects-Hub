@@ -5,13 +5,21 @@ def cost_training_model(num_gpu, cost_per_gpu_hour, hours_per_day, days_training
     Skenario:
     Kamu bekerja sebagai AI Engineer di sebuah perusahaan AI besar (misalnya DeepSeek, OpenAI, atau Gemini).
     Tugas kamu adalah menghitung total biaya training model AI yang akan dijalankan pada sebuah cluster GPU.
-    Informasi yang diberikan adalah:
+    Informasi yang diberikan adalah.
 
-    1. Jumlah GPU.
-    2. Biaya running GPU per jamnya.
-    3. Berapa lama GPU diaktifkan selama 1 hari.
-    4. Berapa hari GPU akan diaktifkan
+    parameters:
+    num_gpu (int) : Jumlah GPU.
+    cost_per_gpu_hour (float) : Biaya running GPU per jamnya.
+    hours_per_day : Berapa jam GPU akan diaktifkan untuk 1 hari.
+    days_training : Jumlah hari GPU diaktifkan
 
+    example:
+    >>> cost_training_model(8, 2.50, 8, 7)     
+    Total jam training: 56
+    Biaya training per GPU: 140.0
+    Total biaya training untuk 8 GPU: 1120.0
+
+    return: 56, 140.0, 1120.0
     '''
 
     # Hitung Total Jam Training:
