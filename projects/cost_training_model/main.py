@@ -33,7 +33,7 @@ def cost_training_model(num_gpu, cost_per_gpu_hour, hours_per_day, days_training
 
     print(f"Total jam training: {total_hours}")
     print(f"Biaya training per GPU: {cost_per_gpu}")
-    print(f"Total biaya training untuk {num_gpu} GPU: {total_cost}")
+    print(f"Total biaya training untuk {num_gpu} GPU: ${total_cost}")
 
     return total_hours, cost_per_gpu, total_cost
 

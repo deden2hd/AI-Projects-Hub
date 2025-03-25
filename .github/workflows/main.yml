@@ -33,11 +33,20 @@ jobs:
             fi
           done
 
-      - name: Run Tests
+      - name: Run Pytest Tests
         run: |
           for project in projects/*; do
-            if [ -f "$project/test.py" ]; then
-              echo "Running tests for $project"
-              pytest "$project/test.py"
+            if ls $project | grep -q 'test_pytest.py'; then
+              echo "Running pytest for $project"
+              pytest "$project"
+            fi
+          done
+
+      - name: Run Unittest Tests
+        run: |
+          for project in projects/*; do
+            if ls $project | grep -q 'test_unittest.py'; then
+              echo "Running unittest for $project"
+              python -m unittest discover -s "$project"
             fi
           done
