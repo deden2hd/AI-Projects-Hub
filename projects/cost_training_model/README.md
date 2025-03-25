@@ -1,8 +1,12 @@
-# Cost Training Model Calculator
+# 🖥️ Cost Training Model Calculator
 
 ## 🚀 Overview
 Tool untuk menghitung biaya training model AI berbasis GPU.
 
+## 🛠️ Installation
+```bash
+pip install -r requirements.txt
+```
 ## 💻 Cara Menggunakan
 ```bash
 python main.py
